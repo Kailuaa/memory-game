@@ -1,0 +1,174 @@
+* {
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  font-size: 10px;
+  color: white;
+  background-color: #102677;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+img {
+  max-width: 60px;
+  max-height: 60px;
+}
+
+.app {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #8B2424;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+button:hover {
+  background-color: rgb(38.6240896359%, 10.0033613445%, 10.0033613445%);
+}
+
+.game {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.game-info {
+  display: flex;
+  justify-content: space-between;
+}
+
+.game-board {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  background-color: #8B2424;
+  cursor: pointer;
+  perspective: 1000px;
+  border-radius: 10px;
+}
+.card .card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+.card-front, .card-back {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  padding: 6px;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  backface-visibility: hidden;
+}
+.card-back {
+  transform: rotateY(180deg);
+}
+.card.open .card-inner {
+  transform: rotateY(180deg);
+}
+.card.open .card-back {
+  background-color: #243A8B;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(36, 58, 139, 0.8);
+  justify-content: center;
+  align-items: center;
+}
+.modal.open {
+  display: flex;
+}
+
+.modal-content {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  padding: 30px;
+  background-color: #8B2424;
+  border-radius: 10px;
+}
+
+.message {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+}
+
+.buttons {
+  display: flex;
+  gap: 10px;
+}
+.buttons button {
+  background-color: #243A8B;
+}
+.buttons button:hover {
+  background-color: #102677;
+}
+
+.leaderboard-results {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  color: white;
+  width: 100%;
+}
+
+.headerRow {
+  display: flex;
+  gap: 10px;
+}
+
+.resultRow {
+  display: grid;
+  grid-template-columns: 60px 80px 100px;
+  gap: 10px;
+  align-items: center;
+}
+
+.place, .moves, .date {
+  text-align: center;
+}
+
+.close-button {
+  background-color: #243A8B;
+}
+.close-button:hover {
+  background-color: #102677;
+}
+
+/*# sourceMappingURL=style.css.map */
