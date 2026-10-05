@@ -1,0 +1,28 @@
+@use './variables' as *;
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    font-size: 10px;
+    color: white;
+    background-color: #102677;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 60px;
+    max-height: 60px;
+}
+
+.app {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}

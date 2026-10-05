@@ -1,0 +1,21 @@
+@use './variables' as *;
+
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: $orange;
+    color: white;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+
+    &:hover {
+        background-color: darken($orange, 10%);
+    }
+}

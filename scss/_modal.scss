@@ -1,0 +1,78 @@
+@use './variables' as *;
+
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(36, 58, 139, 0.8);
+    justify-content: center;
+    align-items: center;
+    &.open {
+        display: flex;
+    }
+}
+
+.modal-content {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+    padding: 30px;
+    background-color: $orange;
+    border-radius: 10px;
+}
+
+.message {
+    display: flex;
+    gap: 10px;
+    align-items: baseline;
+}
+
+.buttons {
+    display: flex;
+    gap: 10px;
+
+    & button {
+        background-color: $blue;
+        
+        &:hover {
+            background-color: $light-blue;
+        }
+    }
+
+}
+
+// ----
+.leaderboard-results {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    color: white;
+    width: 100%;
+}
+
+.headerRow {
+    display: flex;
+    gap: 10px;
+}
+
+.resultRow {
+    display: grid;
+    grid-template-columns: 60px 80px 100px;
+    gap: 10px;
+    align-items: center;
+}
+
+.place, .moves, .date {
+    text-align: center;
+}
+
+.close-button {
+    background-color: $blue;
+    &:hover {
+        background-color: $light-blue;
+    }
+}
